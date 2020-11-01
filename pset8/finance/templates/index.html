@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><b>Symbol</b></th>
+          <th scope="col"><b>Name</b></th>
+          <th scope="col"><b>Shares</b></th>
+          <th scope="col"><b>Price</b></th>
+          <th scope="col"><b>Total</b></th>
+        </tr>
+      </thead>
+      <tbody>
+              {% for row in table %}
+              <tr>
+                {% for item in row %}
+                <td>{{ item }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+          <tr>
+              <td scope="row" colspan="4">CASH</td>
+              <td>{{ cash }}</td>
+          </tr>
+
+      <tfoot>
+          <tr>
+              <td scope="row" colspan="4"></td>
+              <td><b>{{ total_funds }}</b></td>
+          </tr>
+      </tfoot>
+      </tbody>
+    </table>
+    <a href="/changepw" class="btn btn-outline-dark">
+    <span class="glyphicon glyphicon-th-list"></span>Change Password</a>
+
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/history" method="get">
+
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Symbol</th>
+          <th scope="col">Shares</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+              {% for row in history %}
+              <tr>
+                {% for item in row %}
+                <td>{{ row[item] }}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+      </tbody>
+    </table>
+
+{% endblock %}
+
+

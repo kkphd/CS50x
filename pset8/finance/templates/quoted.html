@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="card vertical-center text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ symbol }}</h6>
+                <p class="card-text">{{ price }} USD per share</p>
+            </div>
+        </div>
+    </form>
+{% endblock %}
