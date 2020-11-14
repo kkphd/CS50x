@@ -1,0 +1,152 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+  <title>CPT Unit Calculator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+  <body style="font-family: Roboto">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a href="/" class="navbar-brand"><h5>CPT Unit Calculator</h5></a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        </div>
+    </nav>
+    <div class="container-fluid border-light mt-5" style="width:65rem;">
+      <div class="m-2 border text-center ">
+        <div class="card  bg-primary card-header ">
+          <div class="border-secondary text-center text-white"><h1>Calculate CPT<sup>®</sup> Units for Neuropsychological Testing</h1></div>
+        </div>
+        <div class="p-3">
+            <div class="card" style="width: 55rem; margin:0 auto">
+              <div class="card-header">
+                <h2><b>Technician Billing Time</b></h2>
+                <h2><small><u>2019 Codes:</u> 96138, 96139, & 96146</small></h2>
+              </div>
+              <div class="card-body mt-3">
+                <div class="form-group">
+                  <form action="/" method="post">
+                    <h3>Test Administration Time</h3>
+                    <input type="text" class="form-control" name="techTestMin" placeholder="Total testing time (minutes)">
+                    <label>{{ techTestMin }} minutes ({{ techTestHr }} hours)</label>
+                    <br>
+                    <h3>Test Scoring Time</h3>
+                    <input type="text" class="form-control" name="techScoreMin" placeholder="Total scoring time (minutes)">
+                    <label>{{ techScoreMin}} minutes ({{ testScoreHr }} hours)</label>
+                    <br>
+                    <br>
+                    <h3>Total Test Administration and Scoring Time</h3>
+                    <input type="text" class="form-control" name="techTotalMin" placeholder="Total testing and scoring time (minutes)" readonly value="{{ techTotalMin }}"/>
+                    <label>{{ techTotalMin }} minutes</label>
+                    <br>
+                    <input type="text" class="form-control" name="techTotalHr" placeholder="Total testing and scoring time (hours)" value="{{ techTotalHr }}" readonly/>
+                    <label>{{ techTotalHr }} hours</label>
+                    <br>
+                    <br>
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" name="computer-test-checkbox" id="customSwitches">
+                      <label class="custom-control-label" for="customSwitches"><b>Computer Testing</b></label>
+                    </div>
+                    <br>
+                    <input type="submit" class="btn btn-success" value="Submit"/>
+                  </form>
+                  <br>
+                  <br>
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">CPT Code</th>
+                        <th scope="col">Unit(s)</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">96138</th>
+                        <td>{{ eight }}</td>
+                        <td>Psychological or neuropsychological test administration and scoring by a technician, two or more tests, any method <u>(first 30 minutes)</u></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">96139</th>
+                        <td>{{ nine }}</td>
+                        <td>Each additional 30 minutes (list separately in addition to code for primary procedure)</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">96146</th>
+                        <td>{{ neurCheckBox }}</td>
+                        <td>Psychological or neuropsychological test administration, with single automated instrument via electronic platform, with automated result only</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="alert alert-danger mt-5" role="alert" align="center"><b>Note:</b> The developer does not assume any liability for the consequences of using this application.
+      <br>
+      </br>
+        <a href="https://github.com/kkphd/CS50x/tree/main/project" style="color:#7B1602"><b> 👉 Please see my GitHub repo ("CS50x > project")
+          for more information.</b><a>
+    </div>
+    <div class="card-deck">
+      <div class="card mt-5">
+        <img class="card-img-top responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/22/American_Psychological_Association_logo.svg/1920px-American_Psychological_Association_logo.svg.png" alt="APA website image">
+        <div class="card-body">
+          <h5 class="card-title">American Psychological Association (APA): Psychological and Neuropsychological Testing Codes for Psychologists</h5>
+          <p class="card-text">APA's website on CPT and diagnostic codes. These codes were revised and went into effect on January 1, 2019.</p>
+          <br>
+          <a href="https://www.apaservices.org/practice/reimbursement/health-codes/testing" target="_blank" class="btn btn-outline-info stretched-link">2019 CPT Code Resource (APA)</a>
+        </div>
+      </div>
+      <div class="card mt-5">
+        <img class="card-img-top responsive" src="https://media-exp1.licdn.com/dms/image/C4E1BAQEynKpkJOPS3w/company-background_10000/0?e=2159024400&v=beta&t=2CheurvndCqCVQsmI50-CltsCAb4q0KILJ_y4JWcOPo" alt="NAN website image">
+        <div class="card-body">
+          <h5 class="card-title">National Academy of Neuropsychology (NAN): Testing Code Information</h5>
+          <p class="card-text">NAN's webinar resource regarding the application of the new CPT codes. These codes were revised and went into effect on January 1, 2019.</p>
+          <br>
+          <a href="https://www.nanonline.org/NAN/_ProfessionalResources/_PAIC/2019_Testing_Codes_Update.aspx" target="_blank" class="btn btn-outline-info stretched-link">2019 CPT Code Resource (NAN)</a>
+        </div>
+      </div>
+      <div class="card mt-5">
+        <img class="card-img-top responsive" src="https://uncw.edu/images/we%20are%20images/weare_tonypuente_main-7097.jpg" alt="APA webinar image">
+        <div class="card-body">
+          <h5 class="card-title">2018 CPT Code Webinar (Antonio Puente, PhD and Neil Pliskin, PhD)</h5>
+          <p class="card-text">Dr. Puente's 45-minute webinar on the changes to the Psychological and Neuropsychological Testing Codes.</p>
+          <br>
+          <a href="https://www.youtube.com/watch?v=MGcCmyTVjs0" target="_blank" class="btn btn-outline-info stretched-link">APA Webinar on CPT Codes by Antonio Puente, PhD and Neil H. Pliskin, PhD (2018)</a>
+        </div>
+    </div>
+    <div class="card-deck">
+      <div class="card mt-5">
+        <img class="card-img-top responsive" src="https://scontent-atl3-2.xx.fbcdn.net/v/t1.0-9/17903969_10155785195589881_1105626709765443914_n.jpg?_nc_cat=1&ccb=2&_nc_sid=09cbfe&_nc_ohc=unHuZmx4yhAAX_ZNjKI&_nc_ht=scontent-atl3-2.xx&oh=0c3ccfb90a2280f7e77964841976bb7a&oe=5FC671AF" alt="BCBS insurance logo">
+        <div class="card-body">
+          <h5 class="card-title">Horizon Blue Cross Blue Shield Supplemental Testing Form</h5>
+          <p class="card-text">Horizon BCBS's Psychological and Neuropsychological Assessment Supplemental Form (link updated November 2020). Confirm insurance information with your department or hospital.</p>
+          <br>
+          <a href="https://www.horizonblue.com/providers/forms/forms-specialty-type/horizon-behavioral-health/psychological-and-neuropsychological-assessment-supplemental-form" target="_blank" class="btn btn-outline-info stretched-link">Horizon BCBS's Neuropsychological Assessment Supplemental Form</a>
+        </div>
+      </div>
+       <div class="card mt-5">
+        <img class="card-img-top responsive" src="https://maplemountainrecovery.com/wp-content/uploads/2019/07/UnitedHealthcare-logo.jpg" alt="UHC insurance logo">
+        <div class="card-body">
+          <h5 class="card-title">United Health Care Neuropsychological Testing Information</h5>
+          <p class="card-text">UHC's "Neuropsychological Testing Under the Medical Benefit" (PDF) (updated August 1, 2020). Confirm insurance information with your department or hospital.</p>
+          <br>
+          <a href="https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/neuropsychological-testing-under-medical-benefit.pdf" target="_blank" class="btn btn-outline-info stretched-link">UHC's Neuropsychological Testing Benefit (PDF)</a>
+        </div>
+      </div>
+      <div class="card mt-5">
+        <img class="card-img-top responsive" src="https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/ichbm05766m8mrngncff" alt="Aetna insurance logo">
+        <div class="card-body">
+          <h5 class="card-title">Aetna Neuropsychological and Psychological Testing Information</h5>
+          <p class="card-text">Aetna's neuropsychological testing policy notes (updated September 29, 2020). Confirm insurance information with your department or hospital.</p>
+          <br>
+          <a href="http://www.aetna.com/cpb/medical/data/100_199/0158.html" target="_blank" class="btn btn-outline-info stretched-link">Aetna's Neuropsychological Testing Policy Information</a>
+        </div>
+      </div>
+    </div>
+<br>
+<br>
+<div class="footer"><br><p>Copyright © 2020 kkphd. All rights reserved.</p><br></div>
+</body>
+</html>
