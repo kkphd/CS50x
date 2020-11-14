@@ -6,36 +6,44 @@ CS50x: Introduction to Computer Science (Harvard on edX) is a virtual, introduct
 
 ## Problem Sets
 
-1. [Problem Set 1: C](/pset1)
+### [Problem Set 1: C](/pset1)
   * [Credit](/pset1/credit.c)
   * [Hello](/pset1/hello.c)
   * [Mario](/pset1/mario.c)
-2. [Problem Set 2: Arrays](/pset2)
+
+### [Problem Set 2: Arrays](/pset2)
   * [Caesar](/pset2/caesar.c)
   * [Readability](pset2/readability.c)
-3. [Problem Set 3: Algorithms](/pset3)
+
+### [Problem Set 3: Algorithms](/pset3)
   * [Plurality](/pset3/plurality.c)
   * [Runoff](/pset3/runoff.c)
-4. [Problem Set 4: Memory](/pset4)
+
+### [Problem Set 4: Memory](/pset4)
   * [Filter](/pset4/filter.c)
     * [Helpers](/pset4/helpers.c)
   * [Recover](/pset4/recover.c)
-5. [Problem Set 5: Data Structures](/pset5)
+
+### [Problem Set 5: Data Structures](/pset5)
   * [Speller](/pset5/speller.c)
-6. [Problem Set 6: Python](/pset6)
+
+### [Problem Set 6: Python](/pset6)
   * [Hello](/pset6/hello.py)
   * [Mario](/pset6/mario.py)
   * [Cash](/pset6/cash.py)
   * [Readability](/pset6/readability.py)
   * [DNA](/pset6/dna/dna.py)
-7. [Problem Set 7: SQL](/pset7)
+
+### [Problem Set 7: SQL](/pset7)
   * [Movies](/pset7/movies)
   * [Houses](/pset7/houses)
-8. [Problem Set 8: Information](/pset8)
-  * [Finance](/pset8/finance/application.py)
-9. [Final Project: Web Track](/project)
 
-## Final Project
+### [Problem Set 8: Information](/pset8)
+  * [Finance](/pset8/finance/application.py)
+
+### [Final Project: Web Track](/project)
+
+# Final Project
 
 For my capstone project, I created a web application for neuropsychologists to calculate certain billing codes for billing purposes.
 
